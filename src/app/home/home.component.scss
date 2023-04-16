@@ -1,0 +1,27 @@
+.home-contanier{
+    .pages-content{
+        .home,.report,.about,.contact{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            height: 300px;
+            margin: 10px;
+            width: calc((100% - 20px)/4);
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            .text-bg-primary{
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+            &:hover{
+                transform: scale(1,1.2);
+                .gif-control-p{
+                    display: block;
+                }
+            }
+            .gif-control-p{
+                height: 190px;
+                display: none;
+            }
+        } 
+    }
+}

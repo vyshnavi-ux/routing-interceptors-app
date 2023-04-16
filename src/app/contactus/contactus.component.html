@@ -1,0 +1,33 @@
+<div class="contact-container p-2">
+    <div *ngIf="isLoading| async">
+        <div class="spinner">
+            <img src="../../assets/loader.gif" alt="">
+        </div>
+    </div>
+    <div *ngIf="isLoadingShowC">
+        <div class="spinner">
+            <img src="../../assets/loader.gif" alt="">
+        </div>
+    </div>
+    <table class="table table-striped table-dark" *ngIf="showTable">
+        <thead >
+            <tr>
+                <th>Avatar</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Id</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let _data of getData">
+                <td>{{_data.avatar}}</td>
+                <td>{{_data.email}}</td>
+                <td>{{_data.first_name}}</td>
+                <td>{{_data.id}}</td>
+                <td>{{_data.last_name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button *ngIf="showBtn" class="btn btn-primary btn-sm" (click)="callApi()">Show Loader</button>
+</div>

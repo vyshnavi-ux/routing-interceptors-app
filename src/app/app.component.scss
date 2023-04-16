@@ -1,0 +1,29 @@
+.container-fluid{
+    aside{
+        width: 15%;
+        height: 100%;
+        background-color: #519BFE;
+        ul{
+            list-style-type: none;
+            li{
+                padding: 10px 0;
+                border-bottom: 1px solid black;
+                &.active{
+                    background-color: brown;
+                    a{
+                        color: bisque;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    section{
+        width: calc(100% - 15%);
+        height: 100%;
+        // background-color: #02EEDF;
+    }
+}
